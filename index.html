@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="uz">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ECHO-RELIC // 2035 — NASA</title>
+<style>
+html,body{margin:0;min-height:100%;background:#040916;color:#bdefff;font:15px/1.6 system-ui,sans-serif}
+main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;box-sizing:border-box}
+article{background:#0c172a;border:1px solid #176b85;border-radius:20px;padding:30px;max-width:520px;text-align:center;box-shadow:0 0 60px #00d7ff12}
+h1{color:#fff;letter-spacing:.08em;font-size:22px}
+small{color:#94a3b8}
+button{padding:10px 18px;background:#0ea5e9;border:0;border-radius:10px;cursor:pointer;color:#001221;font-weight:bold}
+</style></head>
+<body><main><article><h1>🚀 ECHO-RELIC // 2035</h1><p id="status">NASA kosmik apparatlari demosini yuklash...</p><small>Sayt dasturi GitHub serveridan olinmoqda. Internet kerak.</small><p><button onclick="location.reload()">Qayta yuklash</button></p></article></main>
+<script>
+(async()=>{
+ try{
+  const urls=Array.from({length:7},(_,i)=>'./site/segment-'+String(i+1).padStart(2,'0')+'.txt');
+  const parts=await Promise.all(urls.map(async url=>{const r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw new Error(url+' HTTP '+r.status);return r.text()}));
+  const html=parts.join('\n');
+  if(!html.startsWith('<!DOCTYPE html>')&&!html.startsWith('<!doctype html>'))throw new Error('Unexpected demo format');
+  if(!html.includes('<script')||!html.includes('</html>'))throw new Error('Demo incomplete');
+  document.open();
+  document.write(html);
+  document.close();
+ }catch(err){document.getElementById('status').textContent='Yuklashda xatolik: '+(err?.message||err);}
+})();
+</script></body></html>
