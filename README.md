@@ -1,17 +1,20 @@
 # NASA_2035 — ECHO-RELIC // 2035
 
-NASA Space Apps Challenge uchun kosmik apparatlar tarixi va 360° ko‘rinishli ta'limiy web ilova.
+NASA Space Apps loyihasi: tarixiy kosmik apparatlar katalogi, 3D ko‘rinish, diagnostika, ma’lumotlar va AI arxiv chat.
 
-## Demo
-**GitHub Pages** ni `main` va `/ (root)` ga yoqing. Keyin `https://odilovozodbek.github.io/NASA_2035/` orqali ochiladi.
+## Demo (GitHub Pages)
+Repozitoriyda `index.html` va `site/segment-01.txt` dan `site/segment-07.txt` gacha demo qismlari mavjud. `index.html` ularni internet orqali birlashtirib yuklaydi.
 
-`index.html` — demo yuklagich. Asl bir faylli HTML katta bo‘lgani sababli `site/segment-01.txt` ... `segment-07.txt` bo‘laklarga ajratilgan; yuklagich ularni brauzerda birlashtiradi. Saytni ko‘rish uchun internet zarur.
+GitHub → **Settings → Pages** → **Deploy from a branch** → **main** → **/(root)** → **Save**.
 
-## NASA manbalari va 3D
-Dastlabki demoda NASA missiyalari tarixi, katalog va 3D apparat ko‘rinishlari bor. Hamma 3D shakllar rasmiy NASA GLB nusxalari ekanligi tasdiqlanmagan; ba'zilari dasturiy chizilgan namunalardir.
-
-## AI va ovoz
-Standart demo NASA tarixiy ma’lumotlari asosidagi arxiv chatdan foydalanadi. **Jonli Gemini AI va bulutli TTS GitHub Pages orqali avtomatik ishlamaydi.** Jonli AI uchun Netlify kabi backend va serverga xavfsiz kiritiladigan `GEMINI_API_KEY` kerak. Kalitni ochiq GitHub repozitoriyga joylamang.
+Saytning kutilayotgan manzili: https://odilovozodbek.github.io/NASA_2035/
 
 ## Manba kod
-Saytning kompilyatsiya qilingan kodi `site/` bo‘limida joylashgan. Tahrir qilinadigan React/TypeScript manba kodi alohida to‘plamda va keyinroq shu repozitoriyga qo‘shiladi.
+Tahrir qilinadigan React/TypeScript fayllari `react-app/` katalogida, jumladan `src/App.tsx`, komponentlar, katalog va 3D Viewer. `netlify/functions/` ichida server AI, model proksi va TTS funksiyalari bor.
+
+## Muhim cheklovlar
+* GitHub Pages faqat statik sahifani xizmat qiladi: `netlify/functions/` funksiyalari bu yerda avtomatik ishlamaydi.
+* Jonli Gemini AI va bulutli nutq uchun serverga xavfsiz o‘rnatilgan `GEMINI_API_KEY` hamda Netlify kabi funksiyalarni bajaradigan hosting talab etiladi.
+* Demo AI'ning arxiv rejimi jonli Gemini emas.
+* Ba’zi 3D shakllar dasturiy chizilgan namunalardir. Barcha modellarni NASA'ning asl GLB modellari bilan bir xilligiga kafolat berilmaydi.
+* Maxfiy API kalitlarini repozitoriyga joylamang.
