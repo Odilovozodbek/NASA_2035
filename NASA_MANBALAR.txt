@@ -1,0 +1,10 @@
+NASA original 3D modellari:
+Pioneer 10: https://science.nasa.gov/3d-resources/pioneer/
+Voyager 1: https://science.nasa.gov/3d-resources/voyager-probe-b/
+Opportunity: https://science.nasa.gov/3d-resources/mars-exploration-rover-opportunity-mer-b/
+Ingenuity: https://science.nasa.gov/3d-resources/ingenuity-mars-helicopter/
+NASA 3D Resources hub: https://science.nasa.gov/3d-resources/
+NASA Image and Video Library API: https://images-api.nasa.gov
+
+This package references NASA-owned official model URLs at runtime.
+The NASA GLB binaries themselves are not redistributed inside the ZIP.
